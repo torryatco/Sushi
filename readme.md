@@ -38,11 +38,11 @@
 
 ## Homework
 
-Continue with the Front End Masters assignment from the first class. You will need a [free account](https://frontendmasters.com/trial/) on Front End Masters to view the lessons and on [Netlify](https://www.netlify.com) in order to deploy your work to the web.
+Continue with the CSS lessons on Front End Masters. Prepare the CSS project (the coffe checkout form) for handing in on Monday.
 
 <!-- 1. use JavaScript to toggle the value of `aria-hidden` when the modal is shown or hidden. (Hint: use `document.querySelector` to select the modal and then use `setAttribute` to set the value of `aria-hidden`.)
 1. check your git install and configure it using the two Github links below or try [this](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
-1. use CSS to style the page so that it looks better. You may examine the two files I showed (ver1.html and ver2.html) in the `other > home-work-samples` directory for inspiration. -->
+2. use CSS to style the page so that it looks better. You may examine the two files I showed (ver1.html and ver2.html) in the `other > home-work-samples` directory for inspiration. -->
 
 <!-- Use your newly acquired CSS and HTML skills to improve the design the restaurant review page so that it looks better. You may examine the two files I showed (ver1.html and ver2.html) in the `other > home-work-samples` directory for inspiration. -->
 
