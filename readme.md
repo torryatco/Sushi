@@ -24,8 +24,8 @@
   - [Highlighting the Navigation](#highlighting-the-navigation)
   - [JavaScript - DOM Scripting](#javascript---dom-scripting)
   - [Aside - playing with the console](#aside---playing-with-the-console)
-    - [A Quick Note on jQuery](#a-quick-note-on-jquery)
-    - [Creating the Popover](#creating-the-popover)
+  - [A Quick Note on jQuery](#a-quick-note-on-jquery)
+  - [Creating the Popover](#creating-the-popover)
       - [QuerySelector](#queryselector)
       - [addEventListener](#addeventlistener)
     - [Moving the Toggle](#moving-the-toggle)
@@ -1101,13 +1101,13 @@ You will also be introduced to:
 - [event types](https://developer.mozilla.org/en-US/docs/Web/Events)
 - [functions](https://developer.mozilla.org/en-US/docs/Glossary/Function)
 
-### A Quick Note on jQuery
+## A Quick Note on jQuery
 
 [jQuery](https://jquery.com) is / was an incredibly popular JavaScript library that has been in use for over a decade. When you search for information about JavaScript or JavaScript techniques your results will likely contain a multitude of references to it. The reasons for using jQuery have dramatically decreased in recent years due to the rapid evolution of JavaScript as well as increasing standardization.
 
 For the purposes of this course, you should try to ignore these as we focus solely on "vanilla JavaScript."
 
-### Creating the Popover
+## Creating the Popover
 
 #### QuerySelector
 
