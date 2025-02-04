@@ -26,8 +26,8 @@
   - [Aside - playing with the console](#aside---playing-with-the-console)
   - [A Quick Note on jQuery](#a-quick-note-on-jquery)
   - [Creating the Popover](#creating-the-popover)
-      - [QuerySelector](#queryselector)
-      - [addEventListener](#addeventlistener)
+    - [QuerySelector](#queryselector)
+    - [addEventListener](#addeventlistener)
     - [Moving the Toggle](#moving-the-toggle)
     - [Using Event Delegation](#using-event-delegation)
   - [Closing the Pop Over](#closing-the-pop-over)
@@ -38,7 +38,7 @@
 
 ## Homework
 
-Continue with the CSS lessons on Front End Masters. Prepare the CSS project (the coffe checkout form) for handing in on Monday.
+<!-- Continue with the CSS lessons on Front End Masters. Prepare the CSS project (the coffe checkout form) for handing in on Monday. -->
 
 <!-- 1. use JavaScript to toggle the value of `aria-hidden` when the modal is shown or hidden. (Hint: use `document.querySelector` to select the modal and then use `setAttribute` to set the value of `aria-hidden`.)
 1. check your git install and configure it using the two Github links below or try [this](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
@@ -49,13 +49,11 @@ Continue with the CSS lessons on Front End Masters. Prepare the CSS project (the
 <!-- 1. Play [Practice your CSS selectors](https://flukeout.github.io) - see how far you can get -->
 <!-- 1. Read [A Complete Guide to CSS Concepts and Fundamentals | Tania Rascia](https://www.taniarascia.com/overview-of-css-concepts/) -->
 
-
 ## Accounts and Installs
 
 1. Install [Git](https://git-scm.com/) on your computer. Windows users install [here](https://gitforwindows.org).
 1. Create an account on [Github](http://github.com)
-1. NEW! Install [NodeJS LTS](https://nodejs.org/en/) - "long term service" on your computer
-
+1. Install [NodeJS LTS](https://nodejs.org/en/) - "long term service" on your computer
 
 ## The Terminal
 
