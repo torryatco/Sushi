@@ -130,9 +130,9 @@ Open `before.html` in VS Code. This style of code is often referred to as "tag s
 
 Note the lack of semantics and the preponderance of visual markup code in the HTML. This is how HTML was written from the late 90's to about a decade ago and is similar to how HTML emails are written today. It is still possible to find this kind of HTML in use.
 
-Open `index.html`. This is an HTML5 document that uses semantic HTML. Note the impact of semantics and how the content is understandable.
+Open `index.html`. This is an HTML5 document that uses semantic HTML. Note the impact of semantics, the lack of presentational code in the HTML and how the content is scanable.
 
-Open `index.html` in Chrome using Go Live. Note the defaults for margins and padding used to display the body and the unordered list (`<ul>`).
+Open `index.html` in Chrome using Go Live. Inspect and note the defaults for margins and padding used to display the body and the unordered list (`<ul>`).
 
 Add a CSS declaration to `styles.css` as follows:
 
@@ -186,8 +186,6 @@ header {
   font-weight: normal;
 }
 ```
-
-`<link>` is generally preferred over `@import`.
 
 Note: `h1` tags are bold by default but Lobster has no bold version. Thus we use `font-weight: normal` to keep the browser from applying bold.
 
