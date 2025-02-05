@@ -1,0 +1,35 @@
+@import url("http://fonts.googleapis.com/css?family=Lato:300,400,700");
+
+body {
+  margin: 12px;
+  color: #333;
+  font-family: Lato, Arial, sans-serif;
+}
+
+header {
+  font-family: Lobster, cursive;
+}
+
+header h1,
+header h2 {
+  font-size: 4rem;
+  margin: 8px 0;
+}
+header h2 {
+  font-size: 2rem;
+}
+
+ul.nav {
+  list-style: none;
+  padding: 0;
+}
+.nav li {
+  display: inline;
+  margin-right: 10px;
+}
+.nav a {
+  padding: 6px;
+  color: #fff;
+  text-decoration: none;
+  background-color: #600;
+}
