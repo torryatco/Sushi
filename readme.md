@@ -290,7 +290,7 @@ Also note the use of a colon to target the hover state. This is an example of a 
 
 Examine the dev tool's color picker. Also, note again the ability to force element hover state.
 
-Add css to `nav a`:
+Add css to `.nav a`:
 
 ```css
 transition: all 0.5s linear;
@@ -321,7 +321,7 @@ _Edit_ the nav CSS rule to position it
 Examine the nav ul in the inspector. Note the coordinate system.
 
 - Toggle the position property on and off in the inspector
-- Use left instead of right to observe stacking
+- Use left instead of right, observe stacking
 
 ### Demo - example of another pseudo selector:
 
@@ -345,7 +345,7 @@ Instead, let's use another "pseudo" selector - [.last-child](https://developer.m
 }
 ```
 
-This is a more advanced but much cleaner solution as it does not require adding a class to the html.
+This is a much cleaner solution as it does not require adding a class to the html.
 
 ## Styling the Aside
 
@@ -528,7 +528,7 @@ The rule here is _absolutely positioned elements are positioned relative to thei
 
 ## More Design Elements
 
-Edit the CSS body rule to include `background-color: #ddd;`:
+Edit the CSS body rule to include `background-color: #ddd;` and line height:
 
 ```css
 body {
@@ -754,7 +754,7 @@ We will add CSS that overrides undesirable features to correct the display on sm
 Begin by removing the margin from the body and article and fixing the nav to the top of the screen.
 
 ```css
-@media all and (max-width: 800px) {
+@media all and (width < 800px) {
   body {
     margin: 0;
   }
@@ -801,7 +801,6 @@ Revert aside's position property to `static` (the default).
   /* ... omitted for bevity  */
   aside {
     position: static;
-    float: none;
     margin-right: 20px;
     width: 100%;
   }
@@ -940,7 +939,7 @@ See also:
 - [Pseudo Classes](https://codepen.io/DannyBoyNYC/pen/ZwrwoQ).
 - [Border Box Model](https://codepen.io/DannyBoyNYC/pen/gqeKqd)
 
-Note: download `flexbox-nav-ready` branch (includes page links) and perform flexbox layout before proceeding.
+<!-- Note: download `flexbox-nav-ready` branch (includes page links) and perform flexbox layout before proceeding. -->
 
 ## Highlighting the Navigation
 
