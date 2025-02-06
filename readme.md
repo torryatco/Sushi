@@ -26,14 +26,13 @@
   - [Aside - playing with the console](#aside---playing-with-the-console)
   - [A Quick Note on jQuery](#a-quick-note-on-jquery)
   - [Creating the Popover](#creating-the-popover)
-    - [QuerySelector](#queryselector)
-    - [addEventListener](#addeventlistener)
+      - [QuerySelector](#queryselector)
+      - [addEventListener](#addeventlistener)
     - [Moving the Toggle](#moving-the-toggle)
     - [Using Event Delegation](#using-event-delegation)
   - [Closing the Pop Over](#closing-the-pop-over)
   - [HomeWork](#homework-1)
     - [1. A Close (✖︎) Link](#1-a-close-︎-link)
-  - [ARIA](#aria)
     - [End Sushi](#end-sushi)
 
 ## Homework
@@ -290,7 +289,7 @@ Also note the use of a colon to target the hover state. This is an example of a 
 
 Examine the dev tool's color picker. Also, note again the ability to force element hover state.
 
-Add css to `nav a`:
+Add css to `.nav a`:
 
 ```css
 transition: all 0.5s linear;
@@ -321,7 +320,7 @@ _Edit_ the nav CSS rule to position it
 Examine the nav ul in the inspector. Note the coordinate system.
 
 - Toggle the position property on and off in the inspector
-- Use left instead of right to observe stacking
+- Use left instead of right, observe stacking
 
 ### Demo - example of another pseudo selector:
 
@@ -345,7 +344,7 @@ Instead, let's use another "pseudo" selector - [.last-child](https://developer.m
 }
 ```
 
-This is a more advanced but much cleaner solution as it does not require adding a class to the html.
+This is a much cleaner solution as it does not require adding a class to the html.
 
 ## Styling the Aside
 
@@ -475,22 +474,22 @@ See my Pen <a href="https://codepen.io/DannyBoyNYC/pen/ZwrwoQ/">Intro-pseudo</a>
 
 Currently our document "flexes" as we make the window wider to make use of all the available horizontal space. This flexibility is a best practice, but in order to understand why let's examine the drawbacks of fixed widths.
 
-Add a wrapper `<div id="wrapper">` to the entire content area after the `<body>` tag and close it before the closing `</body>` tag:
+Add a `<main>` tag to the entire content area after the `<body>` tag and close it before the closing `</body>` tag:
 
 ```html
   <body>
-    <div id="wrapper">
+    <main>
       <nav>
         ...
       </footer>
-    </div>
+    </main>
   </body>
 ```
 
 Add the following to our CSS style block.
 
 ```css
-#wrapper {
+main {
   max-width: 840px;
 }
 ```
@@ -498,7 +497,7 @@ Add the following to our CSS style block.
 Demo: note that we did not use `width`:
 
 ```css
-#wrapper {
+main {
   width: 840px;
 }
 ```
@@ -506,7 +505,7 @@ Demo: note that we did not use `width`:
 Then center it in the browser.
 
 ```css
-#wrapper {
+main {
   max-width: 840px;
   margin: 0 auto 0 auto;
   border: 1px solid #999;
@@ -516,19 +515,19 @@ Then center it in the browser.
 Add a relative positioning property.
 
 ```css
-#wrapper {
+main {
   position: relative;
   ...;
 }
 ```
 
-Note the impact the relative positioning has on the layout (toggle it on and off using the inspector). The two absolutely positioned elements (aside and .nav) previously had no positioning context and aligned themselves to the edges of the browser window. With the addition of the relative positioning to the wrapper they now become positioned relative to the wrapper box.
+Note the impact the relative positioning has on the layout (toggle it on and off using the inspector). The two absolutely positioned elements (aside and .nav) previously had no positioning context and aligned themselves to the edges of the browser window. With the addition of the relative positioning to the main tag they now become positioned relative to the main box.
 
 The rule here is _absolutely positioned elements are positioned relative to their nearest positioned ancestor in the HTML tree_. This is an important CSS design pattern and we will see it again.
 
 ## More Design Elements
 
-Edit the CSS body rule to include `background-color: #ddd;`:
+Edit the CSS body rule to include `background-color: #ddd;` and line height:
 
 ```css
 body {
@@ -540,24 +539,24 @@ body {
 }
 ```
 
-Note that the wrapper's background is transparent and shows through to the gray applied to the body.
+Note that main's background is transparent and shows through to the gray applied to the body.
 
-Let's add a white background to wrapper.
+Let's add a white background to main.
 
 ```css
-#wrapper {
+main {
   background-color: #fff;
   padding: 1rem;
   ...;
 }
 ```
 
-Select the wrapper div and note how the body background color and margin is grayed out in the inspector. Neither it nor the margin are [inherited](https://developer.mozilla.org/en-US/docs/Web/CSS/inheritance) by other elements.
+Select the main and note how the body background color and margin is grayed out in the inspector. Neither it nor the margin are [inherited](https://developer.mozilla.org/en-US/docs/Web/CSS/inheritance) by other elements.
 
-Add a box shadow to the wrapper CSS:
+Add a box shadow to the main CSS:
 
 ```css
-#wrapper {
+main {
   box-shadow: 6px 6px 10px #999;
   ...;
 }
@@ -568,7 +567,7 @@ Note the chip in the styles inspector that allows you to finesse the box shadow.
 Make it more of a glow:
 
 ```css
-#wrapper {
+main {
   box-shadow: 0px 0px 6px 2px #aaa;
   ...;
 }
@@ -754,7 +753,7 @@ We will add CSS that overrides undesirable features to correct the display on sm
 Begin by removing the margin from the body and article and fixing the nav to the top of the screen.
 
 ```css
-@media all and (max-width: 800px) {
+@media all and (width < 800px) {
   body {
     margin: 0;
   }
@@ -801,7 +800,6 @@ Revert aside's position property to `static` (the default).
   /* ... omitted for bevity  */
   aside {
     position: static;
-    float: none;
     margin-right: 20px;
     width: 100%;
   }
@@ -940,7 +938,7 @@ See also:
 - [Pseudo Classes](https://codepen.io/DannyBoyNYC/pen/ZwrwoQ).
 - [Border Box Model](https://codepen.io/DannyBoyNYC/pen/gqeKqd)
 
-Note: download `flexbox-nav-ready` branch (includes page links) and perform flexbox layout before proceeding.
+<!-- Note: download `flexbox-nav-ready` branch (includes page links) and perform flexbox layout before proceeding. -->
 
 ## Highlighting the Navigation
 
@@ -1016,7 +1014,7 @@ The DOM is an application programming interface (API) that treats an HTML docume
 
 The first question many people ask is - what's the difference between the HTML tree and the DOM?
 
-Examine lesson one and the number of cat click displayed. View both the source of the page as well as the DOM in the developer tools. The HTML has "0" as the starting point and changed as we clicked. The HTML wasn't altered, the DOM was.
+Recall lesson one and the number of cat clicks displayed. View both the source of the page as well as the DOM in the developer tools. The HTML has "0" as the starting point and changed as we clicked. The HTML wasn't altered, the DOM was.
 
 <!-- Demo: a Create React App page
 
@@ -1081,7 +1079,7 @@ Note the contents of `scripts.js`. Open the developer tools in Chrome and displa
 
 In order to gain insight into the DOM and some central concepts we will uncomment and recomment lines in `scripts.js` and examine the output in the console.
 
-If you are interested in an additional run through of this content please see [Traversy's video series](https://youtu.be/0ik6X4DJKCc) on DOM scripting.
+If you are interested in an additional run through of this content see [Traversy's video series](https://youtu.be/0ik6X4DJKCc) on DOM scripting.
 
 ---
 
@@ -1099,7 +1097,7 @@ You will also be introduced to:
 
 ## A Quick Note on jQuery
 
-[jQuery](https://jquery.com) is / was an incredibly popular JavaScript library that has been in use for over a decade. When you search for information about JavaScript or JavaScript techniques your results will likely contain a multitude of references to it. The reasons for using jQuery have dramatically decreased in recent years due to the rapid evolution of JavaScript as well as increasing standardization.
+[jQuery](https://jquery.com) is/was an incredibly popular JavaScript library that has been in use for decades. When you search for information about JavaScript or JavaScript techniques your results will likely contain a multitude of references to it. The reasons for using jQuery have dramatically decreased in recent years due to the rapid evolution of JavaScript as well as increasing standardization.
 
 For the purposes of this course, you should try to ignore these as we focus solely on "vanilla JavaScript."
 
@@ -1283,7 +1281,7 @@ This will require us to edit the CSS selector:
 There are many advantages to toggling the class at a higher level in the DOM. One is that it allows us to manipulate the display of other items:
 
 ```css
-.showme #wrapper {
+.showme main {
   filter: blur(4px) grayscale(100%) opacity(50%);
 }
 ```
@@ -1329,9 +1327,9 @@ We will use [element.matches](https://developer.mozilla.org/en-US/docs/Web/API/E
 ```js
 function testMe(num) {
   if (num > 8) {
-    console.log("num is > 8:", num);
+    console.log("num is greater than 8:", num);
   } else {
-    console.log("num is , 8:", num);
+    console.log("num is less than 8:", num);
   }
 }
 
@@ -1381,7 +1379,7 @@ Add to the top of the `popover` div:
 <a class="closer" href="#">✖︎</a>
 ```
 
-E.g.:
+e.g.:
 
 ```html
   <div class="popover">
@@ -1426,7 +1424,7 @@ Add some additional formatting to the close link:
 
 Note: `border-radius: 50%` creates a circle - as long as the box is perfectly square.
 
-Re-enable the `display:none` property on the popover div.
+<!-- Re-enable the `display:none` property on the popover div. -->
 
 We will use - [element.matches](https://developer.mozilla.org/en-US/docs/Web/API/Element/matches) and an `if` statement to test for the item being clicked on, then use `classList` to add or remove a class:
 
@@ -1487,13 +1485,13 @@ function handleClicks(e) {
 }
 ```
 
-## ARIA
+<!-- ## ARIA
 
 [ARIA](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA) is an acronym for Accessible Rich Internet Applications. It is a set of attributes that define ways to make web content and web applications (especially those developed with JavaScript) more accessible to people with disabilities.
 
 Add `aria-modal="true"` to the modal's HTML. This will allow screen readers to know that the modal is a modal.
 
-Add `aria-hidden="true"` to the modal's HTML. This will allow screen readers to know that the modal is hidden. We use JavaScript to toggle the value of `aria-hidden` when the modal is shown or hidden.
+Add `aria-hidden="true"` to the modal's HTML. This will allow screen readers to know that the modal is hidden. We use JavaScript to toggle the value of `aria-hidden` when the modal is shown or hidden. -->
 
 ---
 
